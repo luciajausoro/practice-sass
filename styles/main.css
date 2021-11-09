@@ -22,7 +22,7 @@ body * {
   font-family: "Montserrat";
   text-decoration: none;
   color: white;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: 600;
 }
 
@@ -30,7 +30,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: blue;
+  background-color: #d6323d;
   padding: 2em;
   height: 70px;
 }
@@ -89,12 +89,15 @@ header nav .menu li:hover, header nav .menu li:active {
   text-underline-offset: 4px;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 870px) {
   header .nav_btn {
     display: none;
   }
   header nav {
     all: unset;
+  }
+  header nav.nav-open {
+    display: unset;
   }
   header nav .menu {
     display: flex;
@@ -109,7 +112,7 @@ header nav .menu li:hover, header nav .menu li:active {
   height: calc(100vh - 70px);
 }
 
-.hero .bg-video {
+.hero-bg {
   object-fit: cover;
   height: 100%;
   width: 100%;
@@ -128,7 +131,7 @@ header nav .menu li:hover, header nav .menu li:active {
 .hero-title {
   text-align: center;
   font-family: "Montserrat";
-  font-size: clamp(0.9em, 2.5vw, 5rem);
+  font-size: clamp(0.85em, 3.5vw, 2.75rem);
   font-weight: 400;
   color: white;
   letter-spacing: 3px;
@@ -141,5 +144,11 @@ header nav .menu li:hover, header nav .menu li:active {
   font-weight: 900;
   color: transparent;
   letter-spacing: 0.075em;
-  -webkit-text-stroke: 8px white;
+  -webkit-text-stroke: 5px white;
+}
+
+@media (min-width: 870px) {
+  .hero-title span {
+    -webkit-text-stroke: 8px white;
+  }
 }
